@@ -55,21 +55,20 @@ p { font-size: 23px; text-align: center;}
 
 #gnb { margin: 0 auto; width: 900px;
        padding: 35px 0 0 90px;}
-#gnb > ul { position: absolute;top:0; padding-top: 27px; }
+#gnb > ul { position: absolute; top:0;}
 #gnb > ul > li { float: left; width: 200px; text-align: center; }
-#gnb > ul > li > a { text-transform: uppercase; padding-bottom: 10px;}
-/* .Rb a:hover .Rb>a { border-bottom: 3px solid #f00; font-weight: bold; box-sizing: border-box; } */
+#gnb > ul > li > a { text-transform: uppercase; display: block; width: 200px;  height: 54px; box-sizing: border-box; margin-top: 27px;}
+#gnb > ul > li:hover >a { border-bottom: 3px solid #f00; }
 
 
 /* gnbUl */
-.gnbUl { padding-top: 50px; position: relative;}
-.gnbUl li {line-height: 40px;  }
-/* .gnbUl li a:hover { display: block; width: 200px;  color:#fff; background: #ef0009; }
-.gnbUl li:hover { } */
-
+.gnbUl { padding-top: 30px; position: relative;}
+.gnbUl li { line-height: 40px; }
+.gnbUl li a:hover { color: #f00; font-weight: bold;}
 /* 헤더고정effect  */
 #header.effect { position: fixed; height: 55px; }
 #header.effect h1 {padding-top: 0px;}
+#header.effect a {margin-top: 0px; height: 45px;}
 #header.effect > #gnb > ul { padding-top: 12px; }
 #header.effect > #subnav ul li {padding-top: 12px;}
 #header.effect .gnbUl {padding-top: 25px;}
@@ -260,7 +259,7 @@ p { font-size: 23px; text-align: center;}
 width: 140px; height:140px; border-radius: 50%; background: #fff; top: 580px; left:calc(50% - 70px); position: absolute; z-index: 8;}
 #brands div { width: 1280px; height:700px; margin: 71px auto;  }
 #brands div li { margin: 0 10px 20px 10px; width: 620px; height: 330px; float: left; text-align: center;
-                background: no-repeat center / cover;}
+                background: no-repeat center / 120%;}
 
 #brands div li:nth-child(1) { background-image: url(../images/choco_bg.png); }
 #brands div li:nth-child(2) { background-image: url(../images/mo_bg.jpg); }
@@ -276,22 +275,17 @@ width: 140px; height:140px; border-radius: 50%; background: #fff; top: 580px; le
 
 
 /* brands마우스롤오버 */
-#brands div li:nth-child(1):hover {background-size: 900px;}
-#brands div li:nth-child(2):hover {background-size: 710px;}
-#brands div li:nth-child(3):hover {background-size: 780px;}
-#brands div li:nth-child(4):hover {background-size: 900px;}
 
-#brands div li:nth-child(1).on::before { content:""; display: block; width: 620px; height: 330px;
-                           position: absolute;
+#brands div li a {display: block; width: 620px; height: 330px; }
+
+
+#brands div li:nth-child(1) a.on { display: block;
                            background: rgba(0, 0, 0, 0.6) url(../images/brandsLogo1.png) no-repeat 250px 180px / 130px; }
-#brands div li:nth-child(2).on::before { content:""; display: block; width: 620px; height: 330px;
-                           position: absolute;
+#brands div li:nth-child(2) a.on { display: block;
                            background: rgba(0, 0, 0, 0.6) url(../images/brandsLogo2.png) no-repeat 180px 210px / 260px; }
-#brands div li:nth-child(3).on::before { content:""; display: block; width: 620px; height: 330px;
-                           position: absolute;
+#brands div li:nth-child(3) a.on { display: block;
                            background: rgba(0, 0, 0, 0.6) url(../images/brandsLogo3.png) no-repeat 220px 180px / 180px; }
-#brands div li:nth-child(4).on::before { content:""; display: block; width: 620px; height: 330px;
-                           position: absolute;
+#brands div li:nth-child(4) a.on { display: block;
                            background: rgba(0, 0, 0, 0.6) url(../images/brandsLogo4.png) no-repeat 230px 160px / 160px; }
 
 /* recipes */
@@ -313,8 +307,8 @@ width: 140px; height:140px; border-radius: 50%; background: #fff; top: 580px; le
 #recipes .tip_btn { display: block; width: 236px; height: 50px;
                     background: #000; text-align: center; color: #fff;
                     font-size: 20px; line-height: 50px; margin-top: 50px; margin-left: calc(50% - 118px);}
+
 /* recipes마우스롤오버_플러스버튼생성 */
-#recipes div ul li > a.reciFoc { top:30%;}
 #recipes div ul li > a.reciFoc::after { content: ""; display: block; width: 130px; height: 130px;
                                 border-radius: 50%; background: rgba(255, 255, 255, 0.40) url(../images/플러스버튼.png) no-repeat center; margin: 15px auto 0;
                                 }

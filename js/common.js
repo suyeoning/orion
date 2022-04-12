@@ -40,6 +40,8 @@ $(window).on('scroll', function(){
   }
 })
 
+//============brand원페이지==================
+
 
 
 
@@ -111,43 +113,42 @@ $('.mainNum a').on('click',function(){
 
 
 //버튼 링크 기능 막기(top버튼,로고버튼 제외하고)
-$('a').not('.topBtn').not('#header h1 a').on('click', function(e){
+$('a').not('.topBtn, #header h1 a, #gnb a').on('click', function(e){
   e.preventDefault();
   clearInterval(timer);
-  clearInterval(timer2);
   timer = setInterval(fading, 3000)
-  timer2 = setInterval(yearsliding, 3000)
 })
 
 
 //===============orionway 슬라이드========================
 //오토슬라이드 추가
-let i = 0
-
-function yearsliding(){
-  state = 0;
-  i++;
-  if (i==lilength2){ i=0;}
-  $('.Year > ul > li').removeClass('yearFoc')
-  $('.Year > ul > li:eq('+ i +')').addClass('yearFoc')
-                                  .css({opacity:0})
-                                  .animate({opacity:1})
-}
-
-
+// let i = 0
+//
+// function yearsliding(){
+//   state = 0;
+//   i++;
+//   if (i==lilength2){ i=0;}
+//   $('.Year > ul > li').removeClass('yearFoc')
+//   $('.Year > ul > li:eq('+ i +')').addClass('yearFoc')
+//                                   .css({opacity:0})
+//                                   .animate({opacity:1})
+// }
+//
+//
 
 
 // 숫자 클릭 시=> 해당 연도의 제품 사진 나오도록, 해당연도부터 슬라이드 이어지게
 $('.Year ul li').on('click',function(){
   let yearIndex = $(this).index();
-  i = yearIndex;
+  // i = yearIndex;
+  // $('.Year ul li:eq('+ yearIndex +') dl').css({opacity:1})
   $('.Year ul li').removeClass('yearFoc')
   $('.Year ul li:eq('+ yearIndex +')').addClass('yearFoc')
-                                      .css({opacity:0})
-                                      .animate({opacity:1})
+                                      .fadeIn()
+    // $('.Year ul li:eq('+ yearIndex +') dl').addClass('yearFoc').fadeIn()
 })
 
-let timer2 = setInterval(yearsliding, 3000)
+// let timer2 = setInterval(yearsliding, 3000)
 
 
 
@@ -156,22 +157,25 @@ let timer2 = setInterval(yearsliding, 3000)
 
 
 //==============brands 섹션 마우스 롤오버=================
-$('#brands li').hover(function(){
-  $(this).addClass('on')
-  $(this).children('a').children('dl').css({opacity:1})
+$('#brands div li a').hover(function(){
+  $(this).addClass('on').stop().css({opacity:0})
+                        .animate({opacity:1})
+  $(this).parent().stop().animate({backgroundSize: '125%'})
+
+  $(this).children('dl').stop().animate({opacity:1})
+
 },function(){
   $(this).removeClass('on')
-  $(this).children('a').children('dl').css({opacity:0})
+  $(this).parent().stop().animate({backgroundSize: '120%'})
+  $(this).children('dl').stop().animate({opacity:0})
 })
 
 
 //===============recipes 섹션 마우스 롤오버=================
 $('#recipes ul li').hover(function(){
-  $(this).children('a').addClass('reciFoc')
-                        .css({opacity:0})
-                        .animate({opacity:1})
+  $(this).children('a').addClass('reciFoc').stop().animate({top: '30%'})
 },function(){
-  $(this).children('a').removeClass('reciFoc')
+  $(this).children('a').removeClass('reciFoc').stop().animate({top: 180})
 })
 
 
