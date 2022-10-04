@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* 왼쪽고정메뉴BHeader */
+#BHeader { position: fixed; left:0; top:0;
+          width: 400px; height: 100vh; background: rgb(0,0,0,0.4); z-index: 99;}
+#BHeader h2 { padding-top: calc(50vh - 30px); font-size:50px; color: #fff; font-weight: bold; font-family: 'Nanumgothic'; }
+
+/* 왼고정메뉴 ul li */
+#Bgnb { padding-left: 40px; }
+#Bgnb ul {position: absolute; top:calc(50% - 100px); left:40px; }
+#Bgnb ul li { margin: 20px 0;}
+#Bgnb ul li a { display: block; width: 25px; height: 25px; border-radius: 50%; background: #fff;}
+#Bgnb ul li a span {position: absolute; left: -9999px;}
+
+/* 원 색상 변경 */
+#Bgnb .Bfoc {background: #ec1f27;}
+
+/* 브랜드 원페이지 섹션 공통*/
+.brBg {color: #fff;}
+.brBg p { position: absolute; }
+.brBg a {position: absolute;  width: 358px; height: 60px;
+        margin-top: 80vh;
+        background: url(../images/bg_more_view3.png) no-repeat right center / 80px;
+        color: #fff; font-size: 24px; text-align: center;  }
+.brBg { background: no-repeat center / cover; width:100%; height: 100vh;}
+
+
+/* 브랜드 원페이지 섹션 */
+/* #brand1-초코파이하우스 */
+#brand1 {background-image: url(../images/B_bg1.png);}
+#brand1 a { margin-left: 75%;
+        color: #000; 
+        background: url(../images/bg_more_viewB.png) no-repeat right center / 80px;}
+#brand1 p { margin-top: 10%;
+            margin-left: 70%;
+            font-size: 36px; 
+            color: #000;
+        }
+#brand1 span:nth-child(1) { font-size: 60px; 
+                        font-family: 'Cantata One';
+                        color:#eb1b25;
+                        text-transform:uppercase;}  
+#brand1 span:nth-child(3) { font-size: 60px; 
+                        font-family: 'Cantata One';
+                        color: #eb1b25;
+                        text-transform:uppercase;}  
+#brand1 span:nth-child(5) {display: block;
+                        margin-top: 10%;
+                        margin-left: -15%;
+                        font-size: 36px;
+                        font-weight: bold;
+                        color: #b92b2b;}  
+#brand1 span:nth-child(5)>span { font-size: 30px;
+                                color: #000;
+                                font-weight:lighter;}  
+#brand1 span:nth-child(6) { margin-left: -15%;
+                                font-size: 30px;}  
+#brand1 span:nth-child(7) { }  
+#brand1 span:nth-child(8) { font-weight: bold;
+                                color: #b92b2b;}  
+#brand1 span:nth-child(10) { display: block;
+                        margin-top: 10%;
+                        margin-left: -30%;}
+#brand1 p::after { display: block; content:"";
+                width: 350px; height: 130px;
+                margin-left: 20%;
+                background: url(../images/CS_L1.png) no-repeat left / 87px , url(../images/CS_L2.png) no-repeat center / 87px , url(../images/CS_L3.png) no-repeat right / 87px;}
+
+
+
+/* #brand2-마켓오*/
+#brand2 { background-image: url(../images/B_bg2.png); }
+#brand2 p {text-align: left; margin-top: 25vh; margin-left: 62%;}
+#brand2 p, #brand2 a { text-shadow: 2px 2px 2px #3b3b3b; }
+#brand2 p span:nth-child(1) { font-size: 60px; line-height: 150px;}
+#brand2 p span:nth-child(3) { font-size: 36px; line-height: 120px;}
+#brand2 p span:nth-child(5) { font-size: 30px; line-height: 55px;}
+/* #brand2 p:nth-child(5) { font-size: 30px; margin-top:580px; } */
+#brand2 a { margin-top: 75vh; margin-left: 65%;}
+
+
+/* #brand3-닥터유 */
+#brand3 { background: url(../images/B_bg3.png) no-repeat center / cover;}
+#brand3 p { color: #000; margin-top:23vh; }
+#brand3 p:nth-child(2) { margin-left: 30%; width: 530px; height: 50vh; background: url(../images//dryouLogo_or.png) no-repeat center 8vh / 430px; font-size: 50px; }
+#brand3 p:nth-child(3) { font-size: 35px; margin-top: 63vh; text-align: left; margin-left: 33%;}
+#brand3 span {color: #ff3b00; font-weight: bold;}
+#brand3 a { color: #000; margin-left: 32%; background: url(../images/bg_more_viewB.png) no-repeat right center / 80px;}
+
+
+/* #brand4-용암수 */
+#brand4 { background-image: url(../images/B_bg4.png);}
+#brand4 p { margin-left: 27%; margin-top: 29vh; width: 30%; height: 48vh; background: url(../images/BLogo4.png) no-repeat center bottom / 355px; }
+#brand4 > p > .sp1 { font-size: 36px; line-height: 60px;}
+#brand4 > p > .sp2 { font-size: 50px;}
+#brand4 > p > span span {color: #00bfb9; font-weight: bold;}
+#brand4 a { margin-left: 32%; margin-top: 80vh; }

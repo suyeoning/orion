@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* 1024px이하에서 반응형 */
+body { }
+
+
+/* to hamburgerButton from nomal nav(gnb) */
+#gnbHamBtn { z-index: 999; display: block; 
+        background: url(../images/ham_btnR.png) no-repeat center / 50px;}
+#gnbHamBtn.White { z-index: 1000; display: block; 
+        background: url(../images/ham_btnW.png) no-repeat center / 50px;}
+#gnb { position: fixed; top:0; right:0;
+        width:100%; height: 100vh; background: #54381f;}
+#gnb a { color:#fff; font-size: 36px;}
+#gnb > ul {top:10%; left: 10%; width: 100%;}
+#gnb > ul > li { float: none; width: 70%; text-align: left; }
+#gnb > ul > li > a {height: 70px; border-bottom: 3px solid #fff;}
+#gnb > ul > li:hover >a { color: #f00; }
+
+/* subnav */
+#subnav { display: none; }
+
+
+
+
+/*main*/
+#main ul li div  { width: 100%; border-radius: 0;}
+
+/* #main slider 포커스 */
+.sliderFoc { z-index: 1; }
+
+/*첫번째 #main #slider1 -톡핑*/
+#main #slider1 { width:100%;}
+#main #slider1 div a {background: url(../images/TP3white.png) no-repeat 70% 70% / 47%,
+                                url(../images/TP3green.png) no-repeat 25% 58% / 45%,
+                                url(../images/TPleafsUp.png) no-repeat 0 0 / 100%,
+                                url(../images/TPleafsDown.png) no-repeat 0 102% / 100%,
+                                url(../images/pineNut1.png) no-repeat 75% 87% / 11%,
+                                url(../images/pineNut2.png) no-repeat 7% 70% / 11%,
+                                url(../images/Hazelnut1.png) no-repeat 30% 85% / 8%;}
+#main #slider1 a > dl > dd:nth-child(3) { left: 62%;}
+#main #slider1 a > dl > dd:nth-child(4) { top: 270px; right: 17%; }
+
+/*두번째 #main #slider2 -대왕오!감자*/
+#main #slider2 { width:100%;}
+#main #slider2 div a { background: url(../images/Big_OP.png) no-repeat 28% 23% / 420px,
+                                url(../images/Big_OPPs.png) no-repeat 68% 48% / 15%,
+                                url(../images/chilisause.png) no-repeat 82% 80% / 25%,
+                                url(../images/potato2.png) no-repeat 0 85% / 230px;}
+#main #slider2 > div > a > dl  dd:nth-child(2) {  top: 10%; left: 61%;}
+#main #slider2 > div > a > dl > dd:nth-child(3) { top: 17%; left: 55%;
+                                                font-size: 260%; }
+#main #slider2 > div > a > dl > dd:nth-child(4) { top:35%; left:77%; }
+
+/*세번째 #main #slider3 -이벤트*/
+#main #slider3 { width:100%;}
+#main #slider3 > div > a > dl > dt  { top: 45%; left:68%;
+                                font-size: 300%; }
+#main #slider3 > div > a > dl dd { top: 25%; left:62%;
+                                font-size: 350%; 
+                                width: 70%; background: url(../images/BlueBrush.png) no-repeat -15% 0;}
+
+
+
+
+
+/* mainNum-메인슬라이더 숫자버튼 */
+.mainNum > a { width: 100px; }
+.mainNum a:nth-child(1) { left: 28%; top: 730px;}
+.mainNum a:nth-child(2) { left: 44%; top: 730px;}
+.mainNum a:nth-child(3) { left: 60%; top: 730px;}
+.mainNum > a > span:nth-child(1) { width: 100px; height: 10px; 
+                                background: rgba(250,250,250,0.2); border-radius: 20%; 
+                                border: 1px solid rgba(125,125,125,0.2); 
+                                text-indent: -99999px; overflow: hidden;}
+.mainNum a > span:nth-child(2) { display: none; }
+
+
+/* foc슬라이더Num의 bgcolor,text style */
+.mainNum a  span.numFoc{ background: rgba(0,0,0,0.1); border: 0;
+                        width: 102px; height: 12px;}
+
+
+/* 2020년대 */
+#orionway .Year ul .year6 dd:nth-child(2) { left:calc(50% - 120px); }
+#orionway .Year ul .year6 dd:nth-child(3) { left:calc(74% - 115px); }
+#orionway .Year ul .year6 dd:nth-child(4) { left:calc(26% - 125px); }
+#orionway .Year ul .year6 dd:nth-child(5) { left:calc(62% - 110px); }
+#orionway .Year ul .year6 dd:nth-child(6) { left:calc(38% - 115px); }
+
+

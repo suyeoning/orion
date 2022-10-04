@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body { min-width: 800px; }
+
+
+/* header */
+#header { min-width: 800px; width:800px; background-color: #fff; }
+#header h1 { padding: 5px 10%; }
+#header h1 a { width: 230px; height: 70px; margin-left: 100%;
+              background: url(../images/orion1.png) no-repeat 0 0 / 100%;}
+
+
+
+/* to hamburgerButton from nomal nav(gnb) */
+#gnbHamBtn { z-index: 999; display: block; 
+       background: url(../images/ham_btnR.png) no-repeat center / 50px;}
+#gnbHamBtn.White { z-index: 1000; display: block; 
+       background: url(../images/ham_btnW.png) no-repeat center / 50px;}
+#gnb { position: fixed; top:0; right:0;
+       width:100%; height: 100vh; background: #54381f;}
+#gnb a { color:#fff; font-size: 28px;}
+#gnb > ul {top:10%; left: 10%; width: 100%;}
+#gnb > ul > li { float: none; width: 70%; text-align: left; }
+#gnb > ul > li > a {height: 70px; border-bottom: 3px solid #fff; 
+                     margin-top: 35px;}
+#gnb > ul > li:hover >a { color: #f00; }
+
+/* subnav */
+#subnav { display: none; }
+
+
+
+
+/*main*/
+#main { height: 80vh; }
+#main ul li { width: 100%;}
+#main ul li div  { width: 100%; height: 100%; border-radius: 0%;
+                     margin-left: 0; background-color: rgba(0, 255, 255, 0);}
+
+/*첫번째 #main #slider1 -톡핑*/
+#main #slider1 { background:#fef9ea;}
+#main #slider1 div a { height: 100%; width: 100%;
+                     background: url(../images/TP3white.png) no-repeat 285px 40vh / 400px,
+                                  url(../images/TP3green.png) no-repeat 100px 30vh / 400px,
+                                  url(../images/TPleafsUp.png) no-repeat 0 0 / 100%,
+                                  url(../images/TPleafsDown.png) no-repeat 0 76vh / 100%,
+                                  url(../images/pineNut1.png) no-repeat 555px 65vh / 130px,
+                                  url(../images/pineNut2.png) no-repeat 115px 60vh / 100px,
+                                  url(../images/Hazelnut1.png) no-repeat 100px 55vh / 70px;}
+#main #slider1 a dl dt { padding: 0 0 0 1%; font-size: 95px; }
+#main #slider1 a > dl > dd  { font-size: 36px; }
+#main #slider1 a > dl > dd:nth-child(2) { top: 220px; left: calc(53% - 10px);}
+#main #slider1 a > dl > dd:nth-child(3) { top: 280px; left: calc(70% - 10px); 
+                                          font-size: 36px; }
+#main #slider1 a > dl > dd:nth-child(4) { top: 280px; left: 82%; }
+
+/*두번째 #main #slider2 -대왕오!감자*/
+#main #slider2 { background:#e85929; }
+#main #slider2 div a { width: 100%;
+                        background: url(../images/Big_OP.png) no-repeat 30% 2vh / 520px,
+                                    url(../images/Big_OPPs.png) no-repeat 85% 30vh / 170px,
+                                    url(../images/chilisause.png) no-repeat 92% 58vh / 215px,
+                                    url(../images/potato2.png) no-repeat 8px 65vh / 250px;}
+#main #slider2 > div > a > dl  dd:nth-child(2) {  top:20px; left: 10px;
+                                                 font-size: 55px; }
+#main #slider2 > div > a > dl > dd:nth-child(3) {display: none; }
+#main #slider2 > div > a > dl > dd:nth-child(4) { top:140px; left:580px;
+                                                 font-size: 60px; color: #ffcf90;}
+#main #slider2 > div > a > dl > dd:nth-child(4)::before { background: #ffcf90; 
+                                                        width: 20px; height: 20px; 
+                                                        margin-left: 20px;}
+#main #slider2 > div > a > dl > dd:nth-child(4)::after {left: 75px;
+                                                        background: #ffcf90;
+                                                        width: 20px; height: 20px; }
+                                                        
+#main #slider2 > div > a > dl > dd:nth-child(5) { display: block;  }
+
+
+
+/*세번째 #main #slider3 -이벤트*/
+#main #slider3 { background:#fef9ea; }
+#main #slider3 div a { height: 100%; width: 100%;
+                      background: url(../images/StrWhale.png) no-repeat 22% 95% / 50%,
+                                  url(../images/StrMush.png) no-repeat 59% 59% / 42%,
+                                  url(../images/StrPie.png) no-repeat 15% 10% / 57%,
+                                  url(../images/cherry_bg.png) no-repeat center / 100%,
+                                  url(../images/cherryB_bg1.png) no-repeat -50px 0 / 30%,
+                                  url(../images/cherryB_bg2.png) no-repeat 6% 56vh / 10%;}
+#main #slider3 > div > a > dl > dt  { left:67%; top: 30vh; font-size: 45px; }
+#main #slider3 > div > a > dl dd { left:60%; top: 17vh; font-size: 50px; 
+                            background: url(../images/BlueBrush.png) no-repeat -40px 0 / 60%;}
+
+
+
+/* mainNum-메인슬라이더 숫자버튼 */
+.mainNum { position: relative; width:100%; height: 100vh;  margin: 0;}
+.mainNum > a { float: left; left: 0; top:0; }
+.mainNum > a > span:nth-child(1) { width: 70px; height: 10px;
+                                   border-radius: 0; border: 0;
+                                   text-indent: 100%; overflow: hidden; }
+.mainNum a > span:nth-child(2) { text-indent: 100%; overflow: hidden;}
+.mainNum a:nth-child(1) span:nth-child(2) { width: 0px; }
+.mainNum a:nth-child(2) span:nth-child(2) { width: 0; }
+.mainNum a:nth-child(3) span:nth-child(2) { width: 0; }
+.mainNum a:nth-child(1) { left: 930px; top: 145px;}
+.mainNum a:nth-child(2) { left: 990px; top: 332px;}
+.mainNum a:nth-child(3) { left: 930px; top: 535px;}
+/* 해당_슬라이더_배경색,글자적용 */
+.mainNum a  span.numFoc{ background: #ef0009;}
+
+/* 2020년대 */
+#orionway .Year ul .year6 dd:nth-child(3) { left: 500px; }
+#orionway .Year ul .year6 dd:nth-child(4) { left: 60px; }
+#orionway .Year ul .year6 dd:nth-child(5) { left: 400px; }
+#orionway .Year ul .year6 dd:nth-child(6) { left: 170px; }
+
+/* recipes text 줄바꿈, 위치 변경 */
+#recipes div ul li:nth-child(2) > a { left: 20%; width: 210px; }
+
